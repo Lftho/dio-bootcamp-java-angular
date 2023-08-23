@@ -1,7 +1,7 @@
 # Trilha JS Developer - Pokedex
 
-<img src="" alt="página web">
-<img src="" alt="página mobile">
+<img src="./assets/image/capa/desktop.png" alt="página web">
+<img src="./assets/image/capa/mobile.png" alt="página mobile">
 
 <h4>Projeto foi desenvolvido como exercício do bootcamp satander - angular & java da DIO. Com intuito de práticar o Javascript e o desafio proposto é implementar a tela de detalhes dos pokemons.</h4>
 
