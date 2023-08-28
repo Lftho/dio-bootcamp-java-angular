@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<!-- saved from url=(0047)http://127.0.0.1:5500/web-components/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Components</title>
+  <link rel="stylesheet" href="./Web Components_files/styles.css">
+</head>
+
+<body>
+  <header-title photo="https://uploads.jovemnerd.com.br/wp-content/themes/jovem-nerd-v9/assets/images/logo-jovemnerd.png" item1="NerdCast" item2="NerdOffice" item3="NerdPlayer"><template shadowrootmode="open"><header class="root"><div class="content"><img src="https://uploads.jovemnerd.com.br/wp-content/themes/jovem-nerd-v9/assets/images/logo-jovemnerd.png" alt="Logo da empresa"><ul class="list-center"><li>NerdCast</li><li>NerdOffice</li><li>NerdPlayer</li></ul></div></header><style>
+    *,
+    body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    ul,
+    li {
+      list-style: none;
+    }
+    
+    .root {
+      background-color: #1e1e26;
+      width: 100%;
+    }
+    
+    .content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 0 auto;
+      max-width: 800px;
+      height: 110px;
+    }
+    
+    .content .list-center {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    
+    .content .list-center li {
+      color: #fff;
+      margin: 40px;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 1rem;
+      font-weight: 500;
+    }
+    
+    .root img {
+      width: 140px;
+      height: 84px;
+    }
+    </style></template></header-title>
+
+  <app-cards photo="https://uploads.jovemnerd.com.br/wp-content/uploads/2023/08/boruto_two_blue_vortex_personagens_estreia__2n503l.jpg" title="O que você precisa saber para Two Blue Vortex, novo arco de Boruto" description="Como ler o mangá de graça e em português"><template shadowrootmode="open"><article class="article"><section class="carddiv"><img class="image" src="https://uploads.jovemnerd.com.br/wp-content/uploads/2023/08/boruto_two_blue_vortex_personagens_estreia__2n503l.jpg" alt="Foto do boruto"><div><h3 class="titulo">O que você precisa saber para Two Blue Vortex, novo arco de Boruto</h3><span class="descricao">Como ler o mangá de graça e em português</span></div></section></article><style>
+    /** Cards */
+    .article {
+      display: grid;
+      width: 100%;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+    
+    .article .content {
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+      max-width: 800px;
+      margin: 1rem;
+    }
+    
+    .article .content .image {
+      height: 12.5rem;
+      width: 100%;
+    }
+    
+    .article .content .carddiv {
+      width: 28rem;
+      padding: 1rem 1.2rem;
+      background-color: #1e1e26;
+    }
+    
+    .article .content .carddiv .titulo {
+      font-family: sans-serif;
+      font-size: 1.25rem;
+      color: #ddd;
+    }
+    
+    .article .content .carddiv .descricao {
+      color: #fff;
+      opacity: .8;
+    }
+    
+    @media only screen and (max-width: 600px) {
+      .root {
+        width: 100%;
+      }
+    
+      .article {
+        grid-template-columns: 1fr;
+      }
+    
+      .article .content .image {
+        height: 12.5rem;
+        width: 100%;
+      }
+    
+      .article .content .carddiv {
+        width: 100%;
+        padding: 1rem 1.2rem;
+        background-color: #1e1e26;
+      }
+    }
+    
+    </style></template></app-cards>
+
+  <!-- <article class="article">
+    <section class="content">
+      <img
+        src="https://uploads.jovemnerd.com.br/wp-content/uploads/2023/08/boruto_two_blue_vortex_personagens_estreia__2n503l.jpg"
+        alt="boturo">
+      <div class="contentDiv">
+        <h class="contentCardDivH3">O que você precisa saber para Two Blue Vortex, novo arco de Boruto</h3>
+          <span class="contentCardDivSpan">Como ler o mangá de graça e em português</span>
+      </div>
+    </section>
+  </article> -->
+
+  <script src="./Web Components_files/Header.js" defer=""></script>
+  <script src="./Web Components_files/Cards.js" defer=""></script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+
+<style>.tb_button {padding:1px;cursor:pointer;border-right: 1px solid #8b8b8b;border-left: 1px solid #FFF;border-bottom: 1px solid #fff;}.tb_button.hover {borer:2px outset #def; background-color: #f8f8f8 !important;}.ws_toolbar {z-index:100000} .ws_toolbar .ws_tb_btn {cursor:pointer;border:1px solid #555;padding:3px}   .tb_highlight{background-color:yellow} .tb_hide {visibility:hidden} .ws_toolbar img {padding:2px;margin:0px}</style></body></html>
